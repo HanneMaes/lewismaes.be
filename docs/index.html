@@ -27,18 +27,49 @@
       body {
         height: 100%;
       }
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
+      .broertje {
+        position: fixed; /* Ensures the text stays in place while scrolling */
+        bottom: 10px; /* Distance from the bottom of the viewport */
+        right: 10px; /* Distance from the right of the viewport */
+        z-index: 1000; /* Ensures it stays above most other content */
+        font-style: italic;
+      }
+      .broertje .text {
+        opacity: 0.5;
+      }
     </style>
   </head>
   <body>
     <!-- spline embed -->
     <script
       type="module"
-      src="https://unpkg.com/@splinetool/viewer@0.9.405/build/spline-viewer.js"
+      src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"
     ></script>
     <spline-viewer
       hint
-      loading-anim
-      url="https://prod.spline.design/6kOX9v9GWpRSJJXb/scene.splinecode"
+      loading-anim-type="spinner-small-light"
+      url="undefined"
     ></spline-viewer>
+
+    <!-- Link to Odil -->
+    <div class="broertje">
+      <span class="text">Broetje van </span
+      ><a href="www.odilmaes.be">Odil Maes</a>
+    </div>
+
+    <!-- <script -->
+    <!--   type="module" -->
+    <!--   src="https://unpkg.com/@splinetool/viewer@0.9.405/build/spline-viewer.js" -->
+    <!-- ></script> -->
+    <!-- <spline-viewer -->
+    <!--   hint -->
+    <!--   loading-anim -->
+    <!--   url="https://prod.spline.design/6kOX9v9GWpRSJJXb/scene.splinecode" -->
+    <!-- ></spline-viewer> -->
   </body>
 </html>
