@@ -28,19 +28,32 @@
         height: 100%;
       }
       a {
-        font-weight: bold;
         text-decoration: none;
-        color: black;
-      }
-      .broertje {
+        color: #839e79;
         position: fixed;
-        bottom: 10px;
-        left: 10px;
-        z-index: 1000;
+        bottom: 30px;
+        left: 30px;
+        z-index: 2;
         font-style: italic;
+        transition: width 0.3s ease;
       }
-      .broertje .text {
+      a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 20px;
+        bottom: 0;
+        left: 0;
+        background-color: #e6b092;
+        transition: width 0.3s ease;
+        z-index: -1; /* behind words */
         opacity: 0.5;
+      }
+      a:hover {
+        color: #476044;
+      }
+      a:hover::after {
+        width: 100%;
       }
     </style>
   </head>
@@ -48,28 +61,15 @@
     <!-- spline embed -->
     <script
       type="module"
-      src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"
+      src="https://unpkg.com/@splinetool/viewer@0.9.405/build/spline-viewer.js"
     ></script>
     <spline-viewer
       hint
-      loading-anim-type="spinner-small-light"
-      url="undefined"
+      loading-anim
+      url="https://prod.spline.design/6kOX9v9GWpRSJJXb/scene.splinecode"
     ></spline-viewer>
 
     <!-- Link to Odil -->
-    <div class="broertje">
-      <span class="text">Broetje van </span
-      ><a href="www.odilmaes.be">Odil Maes</a>
-    </div>
-
-    <!-- <script -->
-    <!--   type="module" -->
-    <!--   src="https://unpkg.com/@splinetool/viewer@0.9.405/build/spline-viewer.js" -->
-    <!-- ></script> -->
-    <!-- <spline-viewer -->
-    <!--   hint -->
-    <!--   loading-anim -->
-    <!--   url="https://prod.spline.design/6kOX9v9GWpRSJJXb/scene.splinecode" -->
-    <!-- ></spline-viewer> -->
+    <a href="https://www.odilmaes.be/"> Broetje van <b>Odil Maes</b> </a>
   </body>
 </html>
